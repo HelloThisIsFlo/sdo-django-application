@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'first_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'first_project_python',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'first_project',
+        'USER': 'dev',
+        'PASSWORD': 'dev',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
