@@ -78,9 +78,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'first_project',
-        'USER': 'dev',
-        'PASSWORD': 'dev',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'USER': 'remotedev',
+        'PASSWORD': 'remotedev',
+        'HOST': '207.154.221.195',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
