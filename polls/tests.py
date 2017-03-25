@@ -15,3 +15,7 @@ class QuestionMethodTests(TestCase):
 
         all = Question.objects.all()
         self.assertEqual(len(all), 1)
+
+    def test_another_test(self):
+        print("Adding another test just to check that it workds :D :D ")
+        self.assertEqual(1, 1)
