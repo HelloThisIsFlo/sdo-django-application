@@ -19,3 +19,8 @@ class QuestionMethodTests(TestCase):
     def test_another_test(self):
         print("Adding another test just to check that it workds :D :D ")
         self.assertEqual(1, 1)
+
+    def test_one_more_test(self):
+        print("One More test")
+        self.assertEqual(1, 1)
+
