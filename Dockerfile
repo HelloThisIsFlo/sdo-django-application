@@ -30,11 +30,11 @@ RUN pip install -Ur requirements.txt
 ## END SETUP #######################################
 
 # Make the port available to other docker containers (but not host, need to publish for that)
-EXPOSE 8000
+#EXPOSE 8000
 
 # Command to run when the image is run
 #CMD ["python", "/code/manage.py", "test", "--noinput"]
-CMD ["tox"]
+#CMD ["tox"]
 #CMD ["python", "/code/manage.py", "runserver", "0.0.0.0:8000"]
 
 

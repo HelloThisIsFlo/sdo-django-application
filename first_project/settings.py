@@ -78,13 +78,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'first_project',
-        'USER': 'remotedev',
-        'PASSWORD': 'remotedev',
-        'HOST': 'db', # Docker mysql container name
-        #'USER': 'root',
-        #'PASSWORD': 'root',
-        #'HOST': '207.154.221.195',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'HOST':     os.environ.get('MY_APP_DB_HOST'),
+        'PORT': os.environ.get('MY_APP_DB_PORT'),
+        'USER': os.environ.get('MY_APP_DB_USER'),
+        'PASSWORD': os.environ.get('MY_APP_DB_PASSWORD'),
     }
 }
 

@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    environment:
+      # Set Mysql test environement
+      MYSQL_ROOT_PASSWORD: root
+  web:
+    build: .     #Use the current directory to build the image (will use the Dockerfile)
+    command: ./docker/wait_for_db_and.sh run_tox
+
+    environment:
+      MY_APP_DB_HOST: db
+      MY_APP_DB_PORT: 3306
+      MY_APP_DB_USER: root
+      MY_APP_DB_PASSWORD: root
+    volumes:
+      - .:/code  #?? Need to check that
+    #ports:
+    #  - "8000:8000" # Bind port to host
+    depends_on:
+      - db
