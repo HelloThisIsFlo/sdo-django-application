@@ -24,3 +24,7 @@ class QuestionMethodTests(TestCase):
         print("One More test")
         self.assertEqual(1, 1)
 
+    def test_now_a_failing(self):
+        print("NOW A FAILING TEST !!!!!!!!!!!!!!")
+        self.assertEqual(1, 2)
+
