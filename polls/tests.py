@@ -18,6 +18,7 @@ class QuestionMethodTests(TestCase):
 
     def test_another_test(self):
         print("Testing github webhooks")
+        print("With both config now :D ")
         self.assertEqual(1, 1)
 
     def test_one_more_test(self):
