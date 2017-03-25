@@ -5,18 +5,9 @@
 # Set the base image to unbuntu
 FROM ubuntu
 
-ENV PYTHONUNBUFFERED 1
-
 # Install python version 3.6
-RUN apt-get update
-RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:jonathonf/python-3.6
-
-RUN apt-get update
-RUN apt-get install -y python3.6 python3.6-dev python-pip
-
-# Install required dependencies
-RUN apt-get install -y libmysqlclient-dev
+COPY ./provision.sh /provision.sh
+RUN /provision.sh
 
 # Copy project 
 RUN mkdir /code
@@ -24,10 +15,9 @@ WORKDIR /code
 COPY . /code/
 
 # Install our requirements
-RUN pip install -U pip
 RUN pip install -Ur requirements.txt
 
-## END SETUP #######################################
+
 
 # Make the port available to other docker containers (but not host, need to publish for that)
 #EXPOSE 8000
