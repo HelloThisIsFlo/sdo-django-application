@@ -17,7 +17,7 @@ class QuestionMethodTests(TestCase):
         self.assertEqual(len(all), 1)
 
     def test_another_test(self):
-        print("Adding another test just to check that it workds :D :D ")
+        print("Changin the text, sould trigger build")
         self.assertEqual(1, 1)
 
     def test_one_more_test(self):
