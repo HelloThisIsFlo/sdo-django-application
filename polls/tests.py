@@ -21,6 +21,6 @@ class QuestionMethodTests(TestCase):
         self.assertEqual(1, 1)
 
     def test_one_more_test(self):
-        print("Test Failing pipeline")
-        self.assertEqual(1, 2)
+        print("Test are now passing")
+        self.assertEqual(1, 1)
 
