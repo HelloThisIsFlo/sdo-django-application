@@ -2,7 +2,8 @@ version: '3'
 services:
   db:
     image: mysql
-    restart: always
+    networks:
+      - net
     environment:
       # Set Mysql test environement
       MYSQL_ROOT_PASSWORD: root
@@ -13,6 +14,8 @@ services:
     #Use the current directory to build the image (will use the Dockerfile)
     build: .     
     command: ./docker/wait_for_db_and.sh migrate_and_start
+    networks:
+      - net
     environment:
       MY_APP_DB_HOST: db
       MY_APP_DB_PORT: 3306
@@ -22,3 +25,7 @@ services:
       - "8000:8000" # Bind port to host
     depends_on:
       - db
+
+networks:
+  net:
+    driver: bridge
