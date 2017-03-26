@@ -2,6 +2,7 @@ version: '3'
 services:
   db:
     image: mysql
+    restart: always
     environment:
       # Set Mysql test environement
       MYSQL_ROOT_PASSWORD: root
