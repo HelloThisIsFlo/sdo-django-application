@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-      command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000
     environment:
       MY_APP_DB_HOST: 138.68.107.229
       MY_APP_DB_PORT: 3306
