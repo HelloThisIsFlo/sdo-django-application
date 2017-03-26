@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    command: python manage.py runserver
+    environment:
+      MY_APP_DB_HOST: 138.68.107.229
+      MY_APP_DB_PORT: 3306
+      MY_APP_DB_USER: prodmysql
+      MY_APP_DB_PASSWORD: prodmysqlpass
