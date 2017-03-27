@@ -18,6 +18,7 @@ class QuestionMethodTests(TestCase):
 
     def test_another_test(self):
         print("Separate build & test steps")
+        print("Hello toni :D :D ")
         self.assertEqual(1, 1)
 
     def test_one_more_test(self):
