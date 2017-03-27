@@ -7,6 +7,7 @@ class QuestionMethodTests(TestCase):
 
     def test_first_test(self):
         print("Hello :D This is a test")
+        print("Hello Jose :D :D :D ")
         self.assertIs(1 == 2, False)
 
     def test_with_db(self):
