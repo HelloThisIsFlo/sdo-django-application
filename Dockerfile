@@ -1,14 +1,16 @@
 ###############################
 ##    Dockerfile python app  ##
 ###############################
+# Use base image with python
+FROM python:3.6
 
-# Set the base image to unbuntu
-FROM ubuntu
+# Update pip 
+RUN pip install -U pip
 
-# Install python version 3.6
-COPY ./provision.sh /provision.sh
-RUN /provision.sh
 
+####################
+# Project specific #
+####################
 # Copy project 
 RUN mkdir /code
 WORKDIR /code
@@ -18,14 +20,6 @@ COPY . /code/
 RUN pip install -Ur requirements.txt
 
 
-
-# Make the port available to other docker containers (but not host, need to publish for that)
-#EXPOSE 8000
-
-# Command to run when the image is run
-#CMD ["python", "/code/manage.py", "test", "--noinput"]
-#CMD ["tox"]
-#CMD ["python", "/code/manage.py", "runserver", "0.0.0.0:8000"]
-
-
-
+## Note:
+## The MySql `libmysqlclient-dev` dependency is no more needed, 
+## since it's included by default in the python image
