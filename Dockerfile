@@ -7,7 +7,6 @@ FROM python:3.6
 # Update pip 
 RUN pip install -U pip
 
-
 ####################
 # Project specific #
 ####################
@@ -17,7 +16,7 @@ WORKDIR /code
 COPY . /code/
 
 # Install our requirements
-RUN pip install -Ur requirements.txt
+RUN pip install -r requirements.txt
 
 
 ## Note:
